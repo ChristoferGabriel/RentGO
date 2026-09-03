@@ -53,8 +53,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyApplicationTheme {
                 Scaffold { innerPadding ->
-                    //TelaPesquisa(innerPadding)
-                    TelaMenu(innerPadding)
+                    TelaPesquisa(innerPadding)
+                    //Formulario(innerPadding)
                     //TelaPagamento(innerPadding)
                     // AQUI MUDA AS TELAS !!!!!
                 }
@@ -253,6 +253,7 @@ fun LinhaDeFiltros(
         }
     }
 }
+
 @Composable
 fun CardDoCarro(carro: Carro) {
     Card(
@@ -279,6 +280,7 @@ fun CardDoCarro(carro: Carro) {
                     fontSize = 12.sp,
                     color = CorTextoCinza
                 )
+
                 Row(
                     modifier = Modifier.padding(vertical = 6.dp),
                     verticalAlignment = Alignment.CenterVertically
@@ -286,6 +288,7 @@ fun CardDoCarro(carro: Carro) {
                     Text("★", fontSize = 13.sp, color = CorAzul)
                     Text(" ${carro.avaliacao}", fontSize = 13.sp, color = CorTextoEscuro)
                 }
+
                 Text(
                     text = "${carro.precoPorDia} / dia",
                     fontSize = 14.sp,
